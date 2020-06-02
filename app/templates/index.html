@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    {% for c in pic %}
+    <div class="row">
+        <div class="col-xl-7 col-md-7 col-xs-12 col-sm-12 col-lg-7 offset-md-2 col-md-offest-2 col-lg-offest-2 col-xl-offest-2">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-xl-2 col-sm-2 col-xs-2 ml-2 mr-0 pr-0 pl-0">
+
+                            {% for pro in profiling %}
+                            <img class="rounded-circle account-img" src="{{image.post}}">
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-9 col-xl-9 col-lg-9 col-sm-6 col-xs-3 ml-0" style="padding-top:1rem ;">
+                            <span>{{c.profile.name}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-0 pb-0 pl-0 pr-0">
+                    <a href="/picture/{{c.id}}">
+                        <img src="{{c.image.url}}" alt="" style="width: 20rem;">
+                    </a>
+                </div> 
+                <div class="card-footer ">
+                    <div>
+                        <a href="#">
+                            <i class='far fa-heart' style='font-size:24px'></i>
+                        </a>
+                        <a href="/new/comment/{{c.id}}">
+                            <i class='far fa-comment ml-2' style='font-size:24px'></i>
+                        </a>
+                    </div>
+                    <div style="font-weight: bold;">
+                        {{c.likes.likes}} likes
+                    </div>
+                    <!-- <div><strong>Comments</strong></div> -->
+                    <div class="container">
+                        <p><b>{{c.profile.name}}</b> {{c.image_caption}}</p>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

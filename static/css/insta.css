@@ -1,0 +1,39 @@
+body{
+    background-color: #FAFAFA;
+}
+img{
+    width: 10rem;
+    height: auto;
+}
+.card-body{
+    height: auto;
+    width: 10rem;
+}
+.card-header, .card-footer{
+    background-color: white;
+}
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+}
+
+.flex-container > div {
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+.account-img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.card{
+    border-top: 0;
+    border-top: 0;
+    margin-bottom:0;
+    padding: 0;
+    background-color: white;
+}

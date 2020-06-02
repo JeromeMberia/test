@@ -1,0 +1,3 @@
+Hello {{name}}
+
+Welcome and all that jazz.To my Instgram clone.
