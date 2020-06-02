@@ -53,7 +53,7 @@ class Image(models.Model):
     image = models.ImageField(upload_to = 'images/')
     image_name = models.CharField(max_length = 60)
     image_caption = models.CharField(max_length = 60)
-    profile = models.ForeignKey(Profile)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     likes = models.ForeignKey(Like, null=True)
     comments = models.ForeignKey(Comment,on_delete=models.CASCADE, null=True, blank=True)
 
