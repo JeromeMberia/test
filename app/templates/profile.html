@@ -2,6 +2,7 @@
 
 {% block content %}
   <div class="container">
+    {% if profiling %}
     {% for pro in profiling %}
     <div class="row">
       <img style="width: 80rem;" src="{{image.post}}" alt="">
@@ -21,8 +22,12 @@
       </div>
     </div>
     {% endfor %}
+    {% else %}
+    <h1>You need to update your profile by clicking profile on the navbar.</h1>
+    {% endif %}
       <div class="container">
         <div class="row" style="display:flex;">
+          {% if posts %}
           {% for p in posts %}
           <div class="column-md-4 column-sm-4 column-xs-4 column-lg-4" style="float:left; width:33.33%;padding: 5px;">
             <a href="/picture/{{p.id}}">
@@ -30,6 +35,9 @@
             </a>
           </div>
           {% endfor %}
+          {% else %}
+          <h1 class="mt-10">You don't have any posts,sorry.</h1>
+          {% endif %}
         </div>
       </div>
   </div>

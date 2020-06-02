@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="container" style="margin:10px;">
+  {% if content %}
   {% for c in content %}
   <a class="card" href="/profile/{{c.name}}" style="color:black;text-decoration:none;">
     <div class="card-body">
@@ -9,5 +10,8 @@
     </div>
   </a>
   {% endfor%}
+  {% else %}
+  <h1>No user by that name</h1>
+  {% endif %}
 </div>
 {% endblock %}
