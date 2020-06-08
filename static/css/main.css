@@ -63,4 +63,6 @@ padding:0px 15px;
 padding:0px 15px;
 }
 
-
+p ul > li {
+    list-style-type: disc;
+}

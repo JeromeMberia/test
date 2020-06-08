@@ -18,15 +18,13 @@
                 </h5>
                 {% if c.opinions.all %}
                 {% for m in c.opinions.all %}
-                    <ul style="list-style-type: disc;">
-                        <li>
-                            <p>
-                                <strong>
-                                    {{m.comments}}
-                                </strong>
-                            </p>
-                        </li>
-                    </ul>
+                <p>
+                    <p>
+                        <strong>
+                            {{m.comments}}
+                        </strong>
+                    </p>
+                </p>
                 {% endfor %}
                 {% else %}
                 <p>No comments</p>
