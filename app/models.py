@@ -40,7 +40,7 @@ class Like(models.Model):
         self.save()
 
 class Comment(models.Model):
-    comments =models.CharField(max_length= 90,blank= True)
+    comments = models.CharField(max_length= 90,blank= True)
     post_by = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey('app.Image', on_delete=models.CASCADE, related_name='opinions')
 
@@ -49,6 +49,9 @@ class Comment(models.Model):
 
     def save_comment(self):
         self.save()
+
+    def delete_comment(self):
+        self.delete()
 
 class Image(models.Model):
     image = CloudinaryField('image')

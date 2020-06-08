@@ -1,10 +1,7 @@
 body{
     background-color: #FAFAFA;
 }
-img{
-    width: 10rem;
-    height: auto;
-}
+
 .card-body{
     height: auto;
     width: 10rem;
@@ -36,4 +33,32 @@ img{
     margin-bottom:0;
     padding: 0;
     background-color: white;
+}
+
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.single-img{
+    padding: 0 20px 20px;
+    flex-basis: auto;
+}
+
+@media (max-width:400px) {
+    .people img{
+        float:left; 
+        width:33.33%;
+        padding: 5px;
+    }
+}
+@media (max-width:400px) {
+    .people img{
+        float:left; 
+        width:100%;
+        padding: 5px;
+    }
 }

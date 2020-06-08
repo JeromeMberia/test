@@ -1,0 +1,35 @@
+{% extends 'homepage/base.html' %}
+{% load cloudinary %}
+
+{% block content %}
+
+    {% for c in item %}
+    <div class="container img-container">
+        <div class="img-div">
+            <img src="{{c.image.url}}">
+            <div class="header mt-2 ml-4 pl-4">
+                <p><b>BY      :</b> {{c.profile.name}}</p>
+                <p><b>CAPTION :</b> {{c.image_caption}}</p>
+            </div>
+            <div class="more-section ml-4 pl-4">
+                <label></label>
+                {% for m in c.opinions.all %}
+                    <h5>
+                        Comments:
+                    </h5>
+                    <ul>
+                        <li>
+                            <p>
+                                <strong>
+                                    {{m.comments}}
+                                </strong>
+                            </p>
+                        </li>
+                    </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

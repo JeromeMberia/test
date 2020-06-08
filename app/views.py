@@ -11,14 +11,14 @@ def home(request):
     function to return the homepage of the application
     '''
     pic = Image.objects.all()
-    return render(request,'index.html',{'pic': pic})
+    return render(request,'homepage/index.html',{'pic': pic})
 
 def image(request,pic_id):
     '''
     function that returns pages to store individual images
     '''
     pic = Image.get_image(id=pic_id)
-    return render(request,'image.html',{'item': pic})
+    return render(request,'homepage/image.html',{'item': pic})
 
 def profile(request,iden):
     '''
